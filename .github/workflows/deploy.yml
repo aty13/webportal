@@ -29,3 +29,4 @@ jobs:
       - name: Sync to S3
         run: |
           aws s3 sync . s3://au-code.com --delete --exclude ".git/*" --exclude ".github/workflows/*"
+          
