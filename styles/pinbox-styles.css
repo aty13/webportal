@@ -188,6 +188,25 @@ footer p {
     margin-bottom: 0;
 }
 
+/* Privacy Policy Specific Styles */
+.highlight {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.last-updated {
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header {
