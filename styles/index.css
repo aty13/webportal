@@ -1,0 +1,359 @@
+@import url("tokens.css");
+
+/* ---------- Layout ---------- */
+
+.wrap {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+main > section {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+main > section:first-child {
+  border-top: 0;
+}
+
+/* ---------- Section headings ---------- */
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(var(--space-7), 10vw, 7rem) var(--space-8);
+}
+
+.hero h1 {
+  font-size: var(--step-4);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: #fff;
+}
+
+.hero .role {
+  font-size: var(--step-2);
+  font-weight: 450;
+  color: var(--text);
+  margin-top: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.hero .location {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-faint);
+  margin-top: var(--space-2);
+}
+
+.hero .positioning {
+  font-size: var(--step-1);
+  color: var(--text-muted);
+  max-width: 46ch;
+  margin-top: var(--space-5);
+  line-height: 1.6;
+}
+
+/* ---------- Contact links ---------- */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  list-style: none;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.contact-links a:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+  border-color: var(--line-strong);
+}
+
+.contact-links svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ---------- About ---------- */
+
+.about p {
+  max-width: var(--measure);
+  color: var(--text-muted);
+  font-size: var(--step-1);
+}
+
+.about p + p {
+  margin-top: var(--space-4);
+}
+
+.about strong {
+  color: var(--text);
+  font-weight: 550;
+}
+
+/* ---------- Experience ---------- */
+
+.role-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.role-item {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-5);
+  align-items: baseline;
+}
+
+.role-dates {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-faint);
+  white-space: nowrap;
+  padding-top: 0.15em;
+}
+
+.role-title {
+  font-size: var(--step-1);
+  font-weight: 550;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.role-org {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.role-detail {
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+  max-width: 56ch;
+}
+
+/* ---------- Projects ---------- */
+
+.project-group + .project-group {
+  margin-top: var(--space-7);
+}
+
+.group-name {
+  font-size: var(--step-0);
+  font-weight: 550;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.group-note {
+  font-size: var(--step--1);
+  color: var(--text-faint);
+  max-width: 58ch;
+  margin-bottom: var(--space-4);
+}
+
+.project-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.project:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-hover);
+}
+
+.project h4 {
+  font-size: var(--step-1);
+  font-weight: 550;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.project p {
+  color: var(--text-muted);
+  margin-top: var(--space-2);
+  max-width: 62ch;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  list-style: none;
+}
+
+.tags li {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  padding: 0.15rem var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  font-size: var(--step--1);
+}
+
+.project-links a {
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.project-links .muted {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+/* ---------- Skills ---------- */
+
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-5);
+  align-items: baseline;
+}
+
+.skill-group dt {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+.skill-group dd {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ---------- Credentials ---------- */
+
+.credentials {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.credentials li {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-5);
+  align-items: baseline;
+  color: var(--text-muted);
+}
+
+.credentials .year {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-6);
+  color: var(--text-faint);
+  font-size: var(--step--1);
+}
+
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  main > section {
+    padding-block: var(--space-7);
+  }
+
+  .role-item,
+  .skill-group,
+  .credentials li {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .role-dates,
+  .credentials .year {
+    order: -1;
+  }
+
+  .contact-links {
+    gap: var(--space-2);
+  }
+}
