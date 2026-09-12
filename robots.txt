@@ -1,0 +1,9 @@
+# https://atu-dev.xyz/
+# Everything here is public and intended to be indexed, including by
+# AI and LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended,
+# CCBot and others). No crawler is disallowed.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://atu-dev.xyz/sitemap.xml
